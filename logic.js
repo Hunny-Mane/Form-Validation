@@ -104,9 +104,7 @@ loginbut.addEventListener('click', function(event){
         pass_not_match();
         return;
     }
-
-    window.href.location = "login.html";
-
+    
 });
     
 
