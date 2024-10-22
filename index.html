@@ -1,3 +1,7 @@
+<!-- Hello, my name is Hunny Mane and this is my Major project about Form validation using various function 
+about name length,  wheather password is strong or not, phone number digits should be 10 and showing these 
+error to the user using alert box. -->
+
 <!DOCTYPE html>
 <html>
 
@@ -5,51 +9,91 @@
 
         <title>Form Validation</title>
 
+        <!-- CSS file link -->
         <link rel="stylesheet" href="styles.css">
 
+        <!-- Bootstrap link -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
         rel="stylesheet" 
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
         crossorigin="anonymous">
 
+        <!-- Javascript file link -->
         <script src="logic.js" async defer></script>
 
     </head>
 
     <body>
 
-        <div class="layout" style="display: block;">
+        <!-- containor for whole layout -->
+        <div class="signup">
 
-            <div class="get-started">
-
-                <form>
-
-                <div class="heading">
-                    Get Started
-                </div>
-
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Email Address</label>
-                    <input type="email" class="form-control" id="loginemail" placeholder="name@example.com" required>
-                </div>
-                
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="loginpass" pattern="[0-9]{10}" title="Enter 10 digits" placeholder="********" required>
-                </div>
-
-                <div class="mb-3">
-                    <button type="submit" onclick="" class="btn btn-outline-primary subbtn" style="color: rgba(252, 252, 252, 0.973); font-weight: 600; background-color: rgba(1, 60, 170, 0.651);">Login</button>
-                </div>
-
-                </form>
-
-                <div class="heading1">
-                    <a href="#" class="heading1-font1">Sign up?</a>
-                </div>
-                
+            <!-- heading -->
+            <div class="heading2">
+                Create Account
             </div>
 
+            <!-- after clicking login button take you to login page. -->
+            <form action="login.html"> 
+
+                <!-- input for full name  -->
+                <div class="col-md-9 f1">
+                    <label for="sufname" class="form-label">Full Name *</label>
+                    <input type="text" class="form-control fname" id="sufname" required>
+                </div>
+
+                <!-- input for email address -->
+                <div class="col-md-9 f1">
+                    <label for="suemail" class="form-label">Email Address *</label>
+                    <input type="email" class="form-control semail" id="suemail" required>
+                </div>
+
+                <div class="div1 f1">
+
+                    <!-- input for phone number  -->
+                    <div class="col-md-6">
+                        <label for="sunum" class="form-label">Phone No. *</label>
+                        <input type="tel" class="form-control phno" title="Enter Phone Number" id="sunum" required>
+                    </div>
+                    
+                    <!-- input for age  -->
+                    <div class="col-md-3">
+                        <label for="sunum1" class="form-label">Age *</label>
+                        <input type="number" class="form-control age" min="1" title="Enter Phone Number" id="sunum1" required>
+                    </div>
+
+                </div>
+
+                <!-- input for password  -->
+                <div class="col-6 f1">
+                    <label for="supass" class="form-label">Password *</label>
+                    <input type="password" class="form-control supassword" id="supass" title="Enter strong password" required>
+                </div>
+
+                <!-- input for confirm password  -->
+                <div class="col-6 f1">
+                    <label for="supass1" class="form-label">Confirm Password *</label>
+                    <input type="password" class="form-control supassword1" id="supass1" required>
+                </div>
+
+                <div class="div2">
+
+                    <!-- submit button -->
+                    <div class="mb-4 f1">
+                        <button type="submit" id="loginbtn" class="btn btn-outline-primary subbtn loginbtn" style="color: rgba(252, 252, 252, 0.973); font-weight: 600; background-color: rgba(1, 60, 170, 0.651);">Login</button>
+                    </div>
+                    
+                    <!-- reset button -->
+                    <div class="mb-4 f1">
+                        <button type="reset" class="btn btn-outline-primary subbtn" style="color: rgba(252, 252, 252, 0.973); font-weight: 600; background-color: rgba(1, 60, 170, 0.651);">Reset</button>
+                    </div>
+
+                </div>
+
+            <!-- form close  -->
+            </form>
+              
+        <!-- signup div close  -->
         </div>
         
     </body>
