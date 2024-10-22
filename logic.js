@@ -89,11 +89,13 @@ loginbut.addEventListener('click', function(event){
     //check if password is strong or not and suggest to include special character and numbers.
     if(!pass.value.includes("@" || "_" || "$" || "!" || "0" || "9" || "8" || "7" || "6" || "5" || "4" || "3" || "2" || "1")){
         alert("Password is not strong, use special characters and numbers.");
+        return;
     }
 
     //check if password is same as confirm password
     if(pass.value !== pass1.value){
         pass_not_match();
+        return;
     }
 
 });
