@@ -54,36 +54,43 @@ loginbut.addEventListener('click', function(event){
     //Full name length less than 5 characters
     if(fname.value.length < 5){
         length_not_match();
+        return;
     }
 
     //phone number is 123456789 which is invalid
     if(num.value == 123456789){
         invalid_num();     
+        return;
     }
         
     //phone number length is less than 10 digits
     if(num.value.length < 10){
         short_num();   
+        return;
     } 
         
     //age is greater than 100
     if(num1.value > 100){
         invalid_age();
+        return;
     }
 
     //checks if password is same as your name?
     if(pass.value === fname_split[0]){        
         same_pass_as_name();
+        return;
     }
 
     //check is password is the word password
     if(pass.value === "password"){
         invalid_pass();
+        return;
     }
 
     //password length is less than 8 characters
     if(pass.value.length < 8){
         less_char();
+        return;
     }
 
     //check if password is strong or not and suggest to include special character and numbers.
@@ -97,6 +104,8 @@ loginbut.addEventListener('click', function(event){
         pass_not_match();
         return;
     }
+
+    window.href.location = "login.html";
 
 });
     
